@@ -1,5 +1,5 @@
 import style from "./form.module.scss";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { NavLink } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -8,12 +8,12 @@ import Button from "@mui/material/Button";
 function Form() {
   const [value, setValue] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     console.log("Submitted value:", value);
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setValue(event.target.value);
   };
 
