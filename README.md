@@ -1,5 +1,23 @@
 # React + TypeScript + Vite
 
+The project uses mixins for the most popular styles: text, flexes, and centering.
+
+Variables are used for colors.
+The button responds to mouse hover and click.
+
+The React Player library is used for the video, which allows loading less information. Only the video cover is loaded first. The video itself is loaded when you click play.
+
+The form is created using Material UI.
+
+All pages and elements follow generally accepted SEO recommendations.
+
+install dependencies:
+npm install
+
+Start local server via Vite:
+nmp run dev
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
