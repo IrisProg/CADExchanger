@@ -1,0 +1,90 @@
+@import "../../styles/index.scss";
+@import "../../styles";
+
+.formBlock {
+  @include center();
+  @include flexbox(center, center, column, 20px);
+  max-width: 1110px;
+  padding: 90px;
+
+  background-color: $light-gray;
+
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    @include text($black, 600, 49px, Serif);
+    margin-bottom: 40px;
+  }
+
+  .form {
+    width: 350px;
+    padding: 50px;
+
+    background-color: $white;
+    border-radius: 10px;
+    outline: 1px solid $medium-gray;
+
+    @include flexbox(center, center, column, 20px);
+
+    .formInput {
+      width: 250px;
+      margin-bottom: 20px;
+
+      input {
+        color: $gray;
+      }
+
+      label {
+        @include text($gray, 600, 14px, Montserrat);
+      }
+
+      fieldset {
+        border-color: $gray;
+      }
+      .type {
+        text-decoration: none;
+      }
+    }
+    button {
+      width: 250px;
+      margin-top: 20px;
+      background-color: $black;
+
+      &:hover {
+        background-color: $gray;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .formBlock {
+    h3 {
+      @include text($black, 600, 36px, Serif);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .formBlock {
+    padding: 40px;
+
+    h3 {
+      @include text($black, 600, 20px, Serif);
+      margin-bottom: 20px;
+    }
+
+    .form {
+      width: 300px;
+      padding: 40px;
+
+      .formInput {
+        width: 230px;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 230px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../../styles/index.scss";
+@import "../../../../styles";
+
+.review {
+  @include flexbox(center, center, column, 0);
+  @include center();
+  max-width: 1110px;
+  height: 350px;
+  padding: 40px;
+  background-color: $light-gray;
+
+  h3 {
+    @include text($black, 600, 44px, Serif);
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .review {
+    height: 200px;
+    padding: 20px;
+    background-color: $light-gray;
+
+    h3 {
+      @include text($black, 600, 20px, Serif);
+      margin-bottom: 30px;
+    }
+  }
+}

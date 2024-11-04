@@ -1,0 +1,74 @@
+@import "../../../../styles/index.scss";
+@import "../../../../styles";
+
+.footer {
+  @include center();
+
+  max-width: 1110px;
+  height: 90px;
+  background-color: $white;
+
+  .footerBox {
+    @include flexbox(center, center, row, 0);
+
+    height: 90px;
+    width: 1110px;
+    z-index: 100;
+
+    position: fixed;
+    bottom: 0;
+    align-self: center;
+
+    background-color: $white;
+    p {
+      @include text($black, 600, 24px, Serif);
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+   // max-width: 800px;
+
+    .footerBox {
+      width: 900px;
+    }
+  }
+}
+@media (max-width: 720px) {
+  .footer {
+   // max-width: 600px;
+
+    .footerBox {
+      width: 720px;
+
+      p {
+        @include text($black, 600, 18px, Serif);
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+   // max-width: 600px;
+
+    .footerBox {
+      width: 600px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    //max-width: 400px;
+
+    .footerBox {
+      width: 500px;
+
+      p {
+        @include text($black, 600, 16px, Serif);
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

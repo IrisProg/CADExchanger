@@ -1,0 +1,30 @@
+@import "../../styles/index.scss";
+@import "../../styles";
+
+button {
+  @include text($white, 500, 16px, Serif);
+
+  width: 180px;
+  height: 30px;
+
+  padding: 2px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  background: $black;
+
+  &:hover {
+    background: $gray;
+  }
+  &:active {
+    background: $medium-gray;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2),
+      inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 120px;
+  }
+}

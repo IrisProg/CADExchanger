@@ -1,0 +1,65 @@
+@import "../../../../styles/index.scss";
+@import "../../../../styles";
+
+.news {
+  @include center();
+  max-width: 1110px;
+  margin-top: 50px;
+  padding: 40px;
+  h2 {
+    @include text($black, 600, 49px, Serif);
+    @include flexbox(center, center, row, 70px);
+    margin-bottom: 90px;
+  }
+  .wrapper {
+    @include flexbox(space-between, center, row, 70px);
+
+    .newsBox {
+      .newsBoxItem {
+        margin-bottom: 70px;
+        @include flexbox(space-between, start, column, 10px);
+
+        h4 {
+          @include text($black, 600, 24px, Serif);
+        }
+
+        p {
+          @include text($gray, 400, 16px, Serif);
+        }
+      }
+    }
+  }
+  .newsButton {
+    @include flexbox(center, center, row, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .news {
+    margin-top: 20px;
+    padding: 30px;
+    h2 {
+      @include text($black, 600, 20px, Serif);
+      @include flexbox(center, center, column, 10px);
+      margin-bottom: 10px;
+    }
+    .wrapper {
+      @include flexbox(space-between, center, column, 10px);
+
+      .newsBox {
+        .newsBoxItem {
+          margin-bottom: 20px;
+          @include flexbox(space-between, start, column, 10px);
+
+          h4 {
+            @include text($black, 600, 16px, Serif);
+          }
+
+          p {
+            @include text($gray, 400, 12px, Serif);
+          }
+        }
+      }
+    }
+  }
+}

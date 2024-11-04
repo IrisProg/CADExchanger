@@ -1,0 +1,30 @@
+@import "../styles/index.scss";
+@import "../styles";
+
+.serverMessage {
+  @include flexbox(center, center, row, 0);
+  @include center();
+
+  max-width: 1110px;
+  padding: 90px;
+
+  background-color: $light-gray;
+
+  h3 {
+    @include text($black, 600, 49px, Serif);
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .serverMessage {
+
+  padding: 50px;
+
+  h3 {
+    @include text($black, 600, 30px, Serif);
+    margin-bottom: 0px;
+  }
+}
+  
+}

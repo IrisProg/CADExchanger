@@ -1,0 +1,35 @@
+@import "../../../../styles/index.scss";
+@import "../../../../styles";
+
+.header {
+  @include flexbox(space-between, center, row, 10px);
+  @include text($black, 600, 24px, Serif);
+  @include center();
+  max-width: 1110px;
+  height: 80px;
+  background-color: $white;
+
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+
+  a {
+    cursor: pointer;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .header {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    @include text($black, 600, 16px, Serif);
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../../../styles/index.scss";
+@import "../../../../styles";
+
+.about {
+  @include flexbox(space-between, center, row, 10px);
+  @include center();
+  max-width: 1110px;
+  padding: 40px;
+  background-color: $light-gray;
+
+  .aboutText {
+    width: 40%;
+
+    h1 {
+      @include text($black, 600, 49px, Serif);
+      margin-bottom: 40px;
+    }
+
+    p {
+      @include text($black, 400, 16px, Serif);
+    }
+  }
+  .aboutVideo {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 990px) {
+  .about {
+  
+    .aboutText {
+      width: 50%;
+  
+      h1 {
+        @include text($black, 600, 36px, Serif);
+        margin-bottom: 20px;
+      }
+  
+      p {
+        @include text($black, 400, 14px, Serif);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+  
+    .aboutText {
+  
+      h1 {
+        @include text($black, 600, 24px, Serif);
+     
+      }
+  
+      p {
+        @include text($black, 400, 14px, Serif);
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .about {
+    @include flexbox(space-between, center, column, 20px);
+  
+    .aboutText {
+      width: 70%;
+  
+      h1 {
+        @include text($black, 600, 20px, Serif);
+        
+      }
+  
+      p {
+        @include text($black, 400, 14px, Serif);
+      }
+      .aboutVideo {
+        width: 70%;
+      }
+    }
+  }
+}
